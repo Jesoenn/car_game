@@ -1,6 +1,6 @@
 # Car game
 ## Idea
-- movement WSAD
+- movement WSAD with rotation. W means going straight in front of the car
 - Acceleration and deceleration
 - top speed for each car
 - tile map from file: asphalt, grass, start/meta, checkpoints(so you cant cheese start/meta)
