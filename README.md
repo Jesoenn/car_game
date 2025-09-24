@@ -11,5 +11,6 @@
 - speed counter with moving line (analog live speed)
 
 ## Design
+Diagram v1 [24.09.2025]
 <img width="1561" height="550" alt="Diagram bez tytułu drawio" src="https://github.com/user-attachments/assets/4bedefae-b0fe-441a-8619-1fd08c2ad502" />
 
