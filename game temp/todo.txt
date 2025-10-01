@@ -1,0 +1,19 @@
+Car position, velocity, acceleration, maxSpeed, rotation, angle
+
+car::accelerate(dt), brake(dt), turn(Action::LEFT/RIGHT/ACCELERATE/BRAKE, dt)
+
+
+Timer::tick()
+
+
+
+Game::run() -> pobiera eventy z window, przekazuje do input
+
+Input::handle(auto events idk) -> przekazuje do carcontroller
+
+
+CarController:update(dt)
+
+
+
+CollisionManager::update(Car, carcontroller, dt) -> jezeli kolizja to rotacja 180 stopni, cofniecie i rotacja znowu
