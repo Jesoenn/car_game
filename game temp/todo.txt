@@ -16,4 +16,13 @@ CarController:update(dt)
 
 
 
+
 CollisionManager::update(Car, carcontroller, dt) -> jezeli kolizja to rotacja 180 stopni, cofniecie i rotacja znowu
+
+
+
+
+
+Samochod: samo A/D nic nie robi. Velocity musi byc != 0 
+Puszczam W spowalnia do 0
+Przyspieszanie/Braking ogarnac
