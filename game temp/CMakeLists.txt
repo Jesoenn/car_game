@@ -36,7 +36,8 @@ add_executable(car_game main.cpp
         core/CarController.cpp
         core/CarController.h
         core/CollisionManager.cpp
-        core/CollisionManager.h)
+        core/CollisionManager.h
+        enums/TurnTypes.h)
 
 
 include(FetchContent)

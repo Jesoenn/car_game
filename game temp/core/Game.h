@@ -18,9 +18,9 @@ public:
 
 private:
     sf::RenderWindow* window;
-    Input input;
-    CollisionManager collisionManager;
-    Renderer renderer;
+    // Input input;
+    // CollisionManager collisionManager;
+    // Renderer renderer;
 };
 
 
