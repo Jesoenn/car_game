@@ -6,9 +6,12 @@
 #define CARCONTROLLER_H
 
 
+#include "../entities/Car.h"
+#include "SFML/System/Time.hpp"
 
 class CarController {
-
+public:
+    void update(sf::Time dt, Car& car);
 };
 
 

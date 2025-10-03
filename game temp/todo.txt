@@ -22,7 +22,4 @@ CollisionManager::update(Car, carcontroller, dt) -> jezeli kolizja to rotacja 18
 
 
 
-
-Samochod: samo A/D nic nie robi. Velocity musi byc != 0 
-Puszczam W spowalnia do 0
-Przyspieszanie/Braking ogarnac
+fix obracania auta jak jestem na wstecznym maybe

@@ -11,12 +11,13 @@
 
 class Car {
 public:
-    Car(sf::Vector2f size, float acceleration, float maxSpeed, sf::Angle rotation, float brakeForce);
+    Car(sf::Vector2f size, float acceleration, float maxSpeed, sf::Angle rotation,
+        float brakeForce, float engineBrakingForce);
 
     //Actions
     void accelerate(sf::Time dt);
     void decelerate(sf::Time dt);
-    void brake(sf::Time dt);
+    void reverse(sf::Time dt);
     void turn(TurnTypes turn, sf::Time dt);
 
     void updatePos();
@@ -31,7 +32,7 @@ public:
 
 private:
     const sf::Vector2f size;
-    const float acceleration, maxSpeed, brakeForce;
+    const float acceleration, maxSpeed, brakeForce, engineBrakingForce;
     const sf::Angle rotation;
 
     sf::Angle angle;

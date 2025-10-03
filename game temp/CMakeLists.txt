@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 3.26.4)
 project(car_game)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -37,7 +37,8 @@ add_executable(car_game main.cpp
         core/CarController.h
         core/CollisionManager.cpp
         core/CollisionManager.h
-        enums/TurnTypes.h)
+        enums/TurnTypes.h
+        enums/Effects.h)
 
 
 include(FetchContent)

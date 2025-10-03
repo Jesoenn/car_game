@@ -3,3 +3,7 @@
 //
 
 #include "Input.h"
+
+void Input::update(sf::Time dt, Car& car) {
+    carController.update(dt, car);
+}
