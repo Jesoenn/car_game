@@ -14,12 +14,12 @@ Input::handle(auto events idk) -> przekazuje do carcontroller
 
 CarController:update(dt)
 
-
-
-
 CollisionManager::update(Car, carcontroller, dt) -> jezeli kolizja to rotacja 180 stopni, cofniecie i rotacja znowu
 
-
-
-
 fix obracania auta jak jestem na wstecznym maybe
+
+
+
+
+
+PRZEANALIZOWAC WSZYSTKEI RZECZY ZWIAZANE Z MAPAMI -> MAP, MAPLOADER, GAME -> MAP. Jak uzywane sa wektory tiles??? [y][x] czy [x][y]
