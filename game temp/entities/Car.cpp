@@ -15,11 +15,17 @@ Car::Car(sf::Vector2f size, float acceleration, float maxSpeed, sf::Angle rotati
     angle(sf::radians(0)),
     position({0.f,0.f}),
     velocity(0.f),
-    engineBrakingForce(engineBrakingForce){}
+    engineBrakingForce(engineBrakingForce),
+    slowModifier(1.f){}
 
 //W key
 void Car::accelerate(sf::Time dt) {
-    velocity += acceleration * dt.asSeconds();
+    if (velocity < 0) {
+        velocity += brakeForce * acceleration * dt.asSeconds();
+    } else {
+        velocity += acceleration * dt.asSeconds();
+    }
+
     if (velocity > maxSpeed) {
         velocity = maxSpeed;
     }
@@ -43,9 +49,14 @@ void Car::decelerate(sf::Time dt) {
 
 //S key
 void Car::reverse(sf::Time dt) {
-    velocity -= brakeForce * acceleration * dt.asSeconds();
-    if (velocity < -maxSpeed) {
-        velocity = -maxSpeed;
+    if (velocity > 0.f) {
+        velocity -= brakeForce * acceleration * dt.asSeconds();
+    } else {
+        velocity -= acceleration * dt.asSeconds();
+    }
+
+    if (velocity < -maxSpeed/2.f) {
+        velocity = -maxSpeed/2.f;
     }
 }
 
@@ -57,13 +68,17 @@ void Car::turn(TurnTypes turn, sf::Time dt) {
     angle = angle + modifier * rotation * dt.asSeconds();
 }
 
-void Car::updatePos() {
-    position.x += velocity * std::sin(angle.asRadians());
-    position.y -= velocity * std::cos(angle.asRadians());
+void Car::updatePos(sf::Time dt) {
+    position.x += slowModifier * velocity * std::sin(angle.asRadians()) * dt.asSeconds();
+    position.y -= slowModifier * velocity * std::cos(angle.asRadians()) * dt.asSeconds();
 }
 
 void Car::setPosition(sf::Vector2f position) {
     this->position = position;
+}
+
+void Car::setSlow(float slow) {
+    slowModifier = slow;
 }
 
 sf::Vector2f Car::getPosition() const {
@@ -76,4 +91,8 @@ sf::Vector2f Car::getSize() const {
 
 sf::Angle Car::getAngle() const {
     return angle;
+}
+
+float Car::getSlowModifier() const {
+    return slowModifier;
 }

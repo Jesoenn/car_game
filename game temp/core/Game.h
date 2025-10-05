@@ -5,9 +5,10 @@
 #ifndef GAME_H
 #define GAME_H
 #include "SFML/Graphics/RenderWindow.hpp"
-#include "Input.h"
+#include "Controller.h"
 #include "CollisionManager.h"
 #include "../ui/Renderer.h"
+#include "../world/Map.h"
 
 class Game {
 public:
@@ -18,7 +19,9 @@ public:
 
 private:
     sf::RenderWindow* window;
-    Input input;
+    Controller controller;
+
+    Map map;
     // CollisionManager collisionManager;
     // Renderer renderer;
 };

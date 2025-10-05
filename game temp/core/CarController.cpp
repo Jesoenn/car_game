@@ -21,5 +21,5 @@ void CarController::update(sf::Time dt, Car &car) {
     if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S) && !sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) {
         car.decelerate(dt);
     }
-    car.updatePos();
+    car.updatePos(dt);
 }

@@ -9,6 +9,7 @@
 #include "../enums/TileTypes.h"
 #include "SFML/System/Vector2.hpp"
 
+//Origin of tile is middle
 class Tile {
 public:
     Tile(sf::Vector2f size, sf::Vector2f position, TileTypes type);

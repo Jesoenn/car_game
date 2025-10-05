@@ -20,15 +20,17 @@ public:
     void reverse(sf::Time dt);
     void turn(TurnTypes turn, sf::Time dt);
 
-    void updatePos();
+    void updatePos(sf::Time dt);
 
     //Setters
     void setPosition(sf::Vector2f position);
+    void setSlow(float slow);
 
     //Getters
     sf::Vector2f getPosition() const;
     sf::Vector2f getSize() const;
     sf::Angle getAngle() const;
+    float getSlowModifier() const;
 
 private:
     const sf::Vector2f size;
@@ -37,7 +39,7 @@ private:
 
     sf::Angle angle;
     sf::Vector2f position;
-    float velocity;
+    float velocity, slowModifier;
 };
 
 

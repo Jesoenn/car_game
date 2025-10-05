@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.26.4)
+cmake_minimum_required(VERSION 3.30)
 project(car_game)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -31,14 +31,15 @@ add_executable(car_game main.cpp
         world/LapTimer.h
         ui/SpeedoMeter.cpp
         ui/SpeedoMeter.h
-        core/Input.cpp
-        core/Input.h
+        core/Controller.cpp
+        core/Controller.h
         core/CarController.cpp
         core/CarController.h
         core/CollisionManager.cpp
         core/CollisionManager.h
         enums/TurnTypes.h
-        enums/Effects.h)
+        world/MapLoader.cpp
+        world/MapLoader.h)
 
 
 include(FetchContent)
